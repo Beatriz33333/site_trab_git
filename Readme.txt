@@ -9,6 +9,7 @@ Humberto Nascimento vai implementar o Bootstrap em todas as página.
 
 Sobre o git:
 git clone https://github.com/Beatriz33333/site_trab_git.git
+cd ./site_trab_git/
 git status
 git add .
 git commit "Nome do Commit"
