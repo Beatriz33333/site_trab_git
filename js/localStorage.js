@@ -18,22 +18,25 @@ function addItem() {
     saveItem(item);
     itemInput.value = '';
     descInput.value = '';
+    $('#staticBackdrop').modal('hide');
 }
 
 function addItemToDOM(item) {
-    const listItem = document.createElement('li');
-    listItem.className = 'list-group-item d-flex justify-content-between align-items-center t3';
+    const cardContainer = document.createElement('div');
+    cardContainer.className = 'card mb-3';
+    cardContainer.style.maxWidth = '18rem';
 
-    const itemContent = document.createElement('div');
-    const itemText = document.createElement('span');
-    const itemDescription = document.createElement('small');
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+    cardBody.style.backgroundColor = '#E1A2FF';
 
-    itemText.textContent = item.text;
-    itemDescription.textContent = item.description ? ` - ${item.description}` : '';
-    itemDescription.className = 'text-muted';
+    const cardTitle = document.createElement('h5');
+    cardTitle.className = 'card-title';
+    cardTitle.textContent = item.text;
 
-    itemContent.appendChild(itemText);
-    itemContent.appendChild(itemDescription);
+    const cardText = document.createElement('p');
+    cardText.className = 'card-text';
+    cardText.textContent = item.description || 'Sem descrição';
 
     const editButton = document.createElement('button');
     editButton.className = 'btn btn-warning btn-sm mr-2';
@@ -44,24 +47,28 @@ function addItemToDOM(item) {
         if (newItemText !== null && newItemText.trim() !== '') {
             item.text = newItemText.trim();
             item.description = newDescText.trim();
-            itemText.textContent = item.text;
-            itemDescription.textContent = item.description ? ` - ${item.description}` : '';
+            cardTitle.textContent = item.text;
+            cardText.textContent = item.description || 'Sem descrição';
             updateItem(item);
         }
     };
 
     const deleteButton = document.createElement('button');
-    deleteButton.className = 'btn btn-danger btn-sm b1';
+    deleteButton.className = 'btn btn-danger btn-sm';
     deleteButton.textContent = 'Remover';
     deleteButton.onclick = () => {
-        listItem.remove();
+        cardContainer.remove();
         removeItem(item);
     };
 
-    listItem.appendChild(itemContent);
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
-    document.getElementById('shopping-list').appendChild(listItem);
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    cardBody.appendChild(editButton);
+    cardBody.appendChild(deleteButton);
+
+    cardContainer.appendChild(cardBody);
+
+    document.getElementById('shopping-list').appendChild(cardContainer);
 }
 
 function saveItem(item) {
