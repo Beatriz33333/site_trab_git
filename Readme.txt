@@ -4,7 +4,7 @@ To do List é um site intuitivo onde você pode fazer as suas listas. :)
 Sobre nós:
 Beatriz foi a designer e vai construir a pagina1.html, a página inicial usando HTML / CSS.
 Bea, Letícia Borsaro e Gabriel Santos vão construir a pagina2.html e a pagina3.html usando HTML / CSS.
-José Augusto vai implementar o Javascript na pagina2.html e a pagina3.html.
+José Augusto vai implementar o Javascript na pagina2.html, a pagina3.html e a listas.html.
 Humberto Nascimento vai implementar o Bootstrap em todas as página.
 
 Sobre o git:
