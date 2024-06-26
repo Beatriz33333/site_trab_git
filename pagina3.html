@@ -10,11 +10,8 @@
 
 <header>
 
-    <img src="img/página_3/seta_voltar.png" alt="seta" class="seta_pg3" usemap="#seta-map" >
-    <map name="seta">
-        <area shape="rect" coords="9,7,51,32" alt="Rectangle" title="voltar" href="pagina2.html">
-    </map>
-    
+    <a href="pagina2.html"><img src="img/página_3/seta_voltar.png" alt="seta" class="seta_pg3"></a>
+
 
 </header>
 
@@ -32,7 +29,9 @@
     </div>
 
     <div class="input-box">
-        <textarea placeholder="..."></textarea>
+        <textarea id="desc-input" class="form-control mb-2" placeholder="..."></textarea>
     </div>
+    <a href="pagina2.html"><button class="btn btn-primary" id="add-item-btn">Adicionar</button></a>
+    <script src="js/localStoragepaginas.js"></script>
 </body>
 </html>
