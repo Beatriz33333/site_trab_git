@@ -20,7 +20,7 @@ main {
     padding: 20px;
 }
 
-.pg_inicial_ft {
+.pg_inicial_ft{
     flex: 1; 
     text-align: center;
     padding: 10px;
@@ -28,6 +28,17 @@ main {
     height: auto; 
     box-sizing: border-box;
     margin: 10px;
+}
+
+.pg_inicial {
+    flex: 1; 
+    text-align: center;
+    padding: 10px;
+    max-width: 100%; 
+    height: auto; 
+    box-sizing: border-box;
+    margin: 10px;
+
 }
 
 .p1 {
