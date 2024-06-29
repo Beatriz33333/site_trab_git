@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_pag3.css">
+    <title>To do List</title>
+    
+</head>
+
+<header>
+
+    <img src="img/página_3/seta_voltar.png" alt="seta" class="seta_pg3" usemap="#seta-map" >
+    <map name="seta">
+        <area shape="rect" coords="9,7,51,32" alt="Rectangle" title="voltar" href="pagina2.html">
+    </map>
+    
+
+</header>
+
+<body style="background-color: rgb(225, 162, 255);">
+    <div class="list-group" id="list-tab" role="tablist">
+        <h3 style="color: white">TIPO DE MARCADOR</h3>
+        <a id="list-home-list" data-toggle="list"
+            href="#list-pontos" role="tab" aria-controls="home">Pontos</a>
+        <a id="list-profile-list" data-toggle="list"
+            href="#list-romanos" role="tab" aria-controls="profile">Números Romanos</a>
+        <a id="list-messages-list" data-toggle="list"
+            href="#list-numeros" role="tab" aria-controls="messages">Números</a>
+        <a id="list-settings-list" data-toggle="list"
+            href="#list-quadrado" role="tab" aria-controls="settings">Quadrados</a>
+    </div>
+
+    <div class="input-box">
+        <textarea placeholder="..."></textarea>
+    </div>
+</body>
+</html>
